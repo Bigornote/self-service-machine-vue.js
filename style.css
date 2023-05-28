@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: #fefefe;
+  color: #747474;
+}
+
+main > section.items h4 {
+  width: 100%;
+  margin: 20px auto;
+  font-size: 2vw;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1f4d2d;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  gap: 2vw;
+}
+
+main > section.items {
+  display: flex;
+  max-width: 800px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+section.items .product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 0 calc(33.333% - 1vw);
+  cursor: pointer;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #f8f7f7;
+  border: 3px solid #ececec;
+  min-height: 180px;
+}
+
+section.items .product.selected {
+  border: 3px solid #f5a623;
+}
+
+section.items .photo img {
+  max-width: 90px;
+}
+
+section.items .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+section.items .description .price {
+  font-weight: bold;
+  font-size: 12px;
+  margin: 4px auto;
+}
+
+section.items .description .quantity-area {
+  margin: 8px auto;
+}
+
+section.items .description .quantity-area button {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #3c8853;
+  border: none;
+  border-radius: 5px;
+  color: #d6f1de;
+  transition: all 0.15s ease-in;
+}
+section.items .description .quantity-area button:hover {
+  background-color: #f5a623;
+}
+
+section.items .description .quantity-area button[disabled] {
+  background-color: #ececec;
+  color: #747474;
+  cursor: initial;
+}
+
+section.items .description .quantity-area .quantity {
+  font-weight: bold;
+  margin: 0 8px;
+  color: #1f4d2d;
+}
+
+section.summary {
+  border-radius: 20px;
+  border: 3px solid #1f4d2d;
+  padding: 20px;
+  min-height: 200px;
+  text-align: left;
+  background-color: #3c8853;
+  color: #effff4;
+  font-size: 20px;
+}
+
+section.summary table {
+  width: 100%;
+  padding-top: 20px;
+  font-size: 12px;
+  margin: auto;
+}
+
+section.summary table tr {
+  font-size: 14px;
+}
+
+section.summary table tbody tr:last-of-type th {
+  border-top: 1px solid #effff4;
+  padding-top: 4px;
+}
